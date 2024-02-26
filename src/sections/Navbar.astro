@@ -1,0 +1,49 @@
+---
+import LogoNavbar from '@/components/LogoNavbar.astro'
+import MenuResponsive from '@/components/MenuResponsive.astro'
+
+---
+<nav class="flex justify-around xl:justify-between items-center bg-primary xl:px-44">
+    <div>
+        <a href="/" rel="noopener"><LogoNavbar class="h-full lg:h-40 w-full "/></a>
+    </div>
+    <ul aria-hidden class="hidden md:flex gap-x-12">
+        <a href="/"><li class="text-white hover:text-secondary uppercase text-2xl font-semibold">Inicio</li></a>
+        <a href="/galeria"><li class="text-white hover:text-secondary uppercase text-2xl font-semibold">Galería</li></a>
+        <a href="/reserva"><li class="text-white hover:text-secondary uppercase text-2xl font-semibold">Reservá</li></a>
+        <a href="/ubicacion"><li class="text-white hover:text-secondary uppercase text-2xl font-semibold">Ubicación</li></a>
+    </ul>
+    
+    <div class="flex md:hidden" >
+        <MenuResponsive/>
+    </div>
+    <nav id="mennupal" class="md:hidden hidden flex-col fixed h-full w-full top-0 items-end bg-primary bg-opacity-[0.5]">
+        <svg xmlns="http://www.w3.org/2000/svg" id="close" class="icon icon-tabler icon-tabler-x flex mx-8 my-20" width="42" height="42" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+        <ul class="flex flex-col gap-y-20 justify-center h-full w-full items-center mb-32">
+            <a href="/"><li class="text-white hover:text-secondary uppercase text-2xl font-bold">Inicio</li></a>
+            <a href="/galeria"><li class="text-white hover:text-secondary uppercase text-2xl font-bold">Galería</li></a>
+            <a href="/reserva"><li class="text-white hover:text-secondary uppercase text-2xl font-bold">Reservá</li></a>
+            <a href="/ubicacion"><li class="text-white hover:text-secondary uppercase text-2xl font-bold">Ubicación</li></a>
+        </ul>
+    </nav>
+</nav>
+
+<script>
+    const mennuResponsive = document.getElementById('menuResponsive');
+    const mennupal = document.getElementById('mennupal');
+    const buttonClose = document.getElementById('close');
+
+    mennuResponsive?.addEventListener('click', () => {
+        const mennupal = document.getElementById('mennupal');
+        mennuResponsive?.classList.toggle('hidden')
+        mennupal?.classList.remove('hidden')
+        mennupal?.classList.add('flex', 'animate-flip-up', 'animate-once', 'animate-duration-500', 'animate-delay-100', 'animate-ease-linear')
+        
+        
+    })
+    buttonClose?.addEventListener('click', () => {
+        mennuResponsive?.classList.toggle('hidden')
+        mennupal?.classList.remove('flex')
+        mennupal?.classList.add('hidden')
+    })
+</script>

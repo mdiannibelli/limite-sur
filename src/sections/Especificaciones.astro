@@ -1,0 +1,53 @@
+---
+import IconGroup from '@/components/icons/icon-group.astro';
+import IconBed from '@/components/icons/icon-bed.astro';
+import IconHome from '@/components/icons/icon-home-door.astro';
+import IconWater from '@/components/icons/icon-water.astro';
+import IconRectangle from '@/components/icons/icon-rectangle.astro';
+import IconWifi from '@/components/icons/icon-wifi.astro';
+---
+
+<section class="flex flex-wrap md:flex-nowrap justify-center gap-x-8 gap-y-2 md:gap-x-4 xl:gap-x-24 items-center px-4 py-6 xl:mt-4">
+    <div class="flex">  
+        <IconGroup class='size-4 md:size-full'/>
+        <div class="flex flex-col items-center md:ml-2">
+            <h2 class="font-tajawal text-tertiary text-md lg:text-2xl font-bold">6</h2>
+            <h3 class="font-tajawal text-tertiary uppercase text-[8px] lg:text-xs font-bold tracking-[0.15em]">Ocupantes</h3>
+        </div>
+    </div>   
+    <div class="flex">
+        <IconBed class='size-4 md:size-full'/>
+        <div class="flex flex-col items-center ml-2">
+            <h2 class="font-tajawal text-tertiary text-md lg:text-2xl font-bold">5</h2>
+            <h3 class="font-tajawal text-tertiary uppercase text-[8px] lg:text-xs font-bold tracking-[0.15em]">Camas</h3>
+        </div>
+    </div>   
+    <div class="flex">
+        <IconHome class='size-4 md:size-full'/>
+        <div class="flex flex-col items-center ml-2">
+            <h2 class="font-tajawal text-tertiary text-md lg:text-2xl font-bold">3</h2>
+            <h3 class="font-tajawal text-tertiary uppercase text-[8px] lg:text-xs font-bold tracking-[0.15em]">Dormitorios</h3>
+        </div>
+    </div>   
+    <div class="flex">
+        <IconWater class='size-4 md:size-full'/>
+        <div class="flex flex-col items-center ml-2">
+            <h2 class="font-tajawal text-tertiary text-md lg:text-2xl font-bold">1</h2>
+            <h3 class="font-tajawal text-tertiary uppercase text-[8px] lg:text-xs font-bold tracking-[0.15em]">Baño</h3>
+        </div>
+    </div>   
+    <div class="flex">
+        <IconRectangle class='size-4 md:size-full'/>
+        <div class="flex flex-col items-center ml-2">
+            <h2 class="font-tajawal text-tertiary text-md lg:text-2xl font-bold">160</h2>
+            <h3 class="font-tajawal text-tertiary text-[8px] lg:text-xs font-bold tracking-[0.15em]">m2</h3>
+        </div>
+    </div>   
+    <div class="flex">
+        <IconWifi class='size-4 md:size-full'/>
+        <div class="flex flex-col items-center ml-2">
+            <h2 class="font-tajawal text-tertiary text-md lg:text-2xl uppercase font-bold">Wifi</h2>
+            <h3 class="font-tajawal text-tertiary uppercase text-[8px] lg:text-xs font-bold tracking-[0.15em]">Gratis</h3>
+        </div>
+    </div>   
+</section>

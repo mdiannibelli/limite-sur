@@ -1,0 +1,38 @@
+---
+import '@fontsource/tajawal';
+import '@fontsource-variable/josefin-slab';
+interface Props {
+	title: string;
+	description: string;
+}
+
+const {description, title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		text-decoration: none;
+		list-style: none;
+	}
+	html {
+		/* font-family: 'Tajawal', sans-serif; */
+		/* font-family: 'Josefin Slab Variable', serif; */
+		background: #eeeeee;
+	}
+</style>
