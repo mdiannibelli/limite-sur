@@ -22,13 +22,13 @@ import Whatsapp from '@/components/Whatsapp.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
 	</head>
+	<Whatsapp/>
 	<Header/>
 	<Navbar/>
 	<body>
 		<slot />
 	</body>
 	<Footer/>
-	<Whatsapp/>
 </html>
 <style is:global>
 	* {
