@@ -9,16 +9,16 @@ import 'swiper/css/effect-coverflow';
 import { Navigation, EffectCoverflow } from 'swiper/modules';
 
 const imgs = [
-  {img: '@/../public/img0.jpeg', title:'img0'}, 
-  {img: '@/../public/img1.jpeg', title:'img1'},
-  {img: '@/../public/img2.jpg', title:'img2'},
-  {img: '@/../public/img3.webp', title:'img3'},
-  {img: '@/../public/img4.webp', title:'img4'},
-  {img: '@/../public/img5.webp', title:'img5'},
-  {img: '@/../public/img6.webp', title:'img6'},
-  {img: '@/../public/img7.webp', title:'img7'},
-  {img: '@/../public/img8.webp', title:'img8'},
-  {img: '@/../public/img9.webp', title:'img9'},
+  {img: '/img0.jpeg', title:'img0'}, 
+  {img: '/img1.jpeg', title:'img1'},
+  {img: '/img2.jpg', title:'img2'},
+  {img: '/img3.webp', title:'img3'},
+  {img: 'img4.webp', title:'img4'},
+  {img: '/img5.webp', title:'img5'},
+  {img: '/img6.webp', title:'img6'},
+  {img: '/img7.webp', title:'img7'},
+  {img: '/img8.webp', title:'img8'},
+  {img: '/img9.webp', title:'img9'},
 ]
 
 export default function SwiperGallery() {
