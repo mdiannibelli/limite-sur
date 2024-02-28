@@ -1,12 +1,13 @@
 {
   "extends": "astro/tsconfigs/strict",
-  /* path */
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "C:/Users/mdian/Desktop/Programación/limite-sur/limite-sur",
     "paths": {
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

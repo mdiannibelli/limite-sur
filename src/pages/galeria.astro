@@ -1,0 +1,20 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import SwiperGallery from '@/components/SwiperGallery.jsx'
+---
+
+<Layout title="Galería" description="Todas las fotos de la cabaña Limite Sur.">
+    <section class="flex flex-col items-center overflow-hidden">
+        <div class="flex justify-center items-center mt-12">
+            <h1 class="tajawal text-4xl md:text-6xl text-quaternary tracking-[0.25em] uppercase">Galería</h1>
+        </div>
+        <div class="mt-12 max-w-[1400px]">
+            <SwiperGallery client:load/>
+        </div>
+        <div class="max-w-[300px] md:max-w-[600px] lg:max-w-[900px] mt-20 flex flex-col justify-center">
+            <p class="tajawal text-sm md:text-md lg:text-xl text-pretty mb-4"><strong class="text-primary text-medium">Cabañas Limite Sur</strong> se encuentra en Esquel, a solo 19 km de La Hoya, y ofrece alojamiento con vistas al jardín, wifi gratis y estacionamiento privado gratuito.</p>
+            <p class="tajawal text-sm md:text-md lg:text-xl text-pretty mb-4">Cuenta con cabañas en dos plantas, con comodidades para hasta 6 pasajeros, casa con jardín, baño en planta baja y cocina totalmente equipada con vajilla completa.</p>
+            <p class="tajawal text-sm md:text-md lg:text-xl text-pretty">Las cabañas se encuentran ubicadas en el barrio residencial Villa Ayelén y a cuatro cuadras de la ruta 259 camino a la ciudad de Trevelin.</p>
+        </div>
+    </section>
+</Layout>

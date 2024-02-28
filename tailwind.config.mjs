@@ -10,8 +10,7 @@ export default {
 				quaternary: '#7E8890',
 			},
 			fontFamily: {
-				tajawal: "'Tajawal', sans-serif;",
-				josefin: "'Josefin Slab Variable', serif;"
+				tajawal: "'Tajawal', sans-serif;"
 			},
 			boxShadow: {
 				'3xl': '0 25px 60px -5px rgba(0, 0, 0, 0.35)',
