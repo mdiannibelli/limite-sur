@@ -5,6 +5,7 @@ import IconPhone from "@/components/icons/icon-phone.astro"
 import IconMail from "@/components/icons/icon-mail.astro"
 import IconBooking from "@/components/icons/icon-booking.astro"
 import IconTrivago from "@/components/icons/icon-trivago.astro"
+import IconInstagram from '@/components/icons/icon-instagram.astro'
 import { Image } from "astro:assets"
 ---
 
@@ -39,13 +40,17 @@ import { Image } from "astro:assets"
         <div class="flex flex-col gap-y-4 items-center md:items-start">
             <h1 class="uppercase tajawal text-primary font-semibold text-lg">Encuentranos en:</h1>
             <div class="flex flex-col gap-y-1">
-                <a class="flex items-center mb-2" href="mailto:limitesuresquel@gmail.com" target="_blank" rel="noopener">
+                <a class="flex items-center mb-2" href="https://www.booking.com/hotel/ar/limite-sur-esquel.es-ar.html" target="_blank" rel="noopener">
                     <IconBooking class="text-primary"/>
                     <span class="ml-1 text-primary tajawal font-regular text-md">Booking</span>
                 </a>
                 <a class="flex items-center mb-2" href="mailto:limitesuresquel@gmail.com" target="_blank" rel="noopener">
                     <IconTrivago class="text-primary"/>
                     <span class="ml-1 text-primary tajawal font-regular text-md">Trivago</span>
+                </a>
+                <a class="flex items-center mb-2" href="https://www.instagram.com/limitesuresquel/?hl=es-la" target="_blank" rel="noopener">
+                    <IconInstagram class="text-primary"/>
+                    <span class="ml-1 text-primary tajawal font-regular text-md">limitesuresquel</span>
                 </a>
             </div>
         </div>

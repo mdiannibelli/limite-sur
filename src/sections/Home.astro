@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import img0 from '@/../public/img-0.jpg'
-import img1 from '@/../public/img-1.jpeg'
-import img2 from '@/../public/img-2.jpeg'
-import img3 from '@/../public/img-3.jpg'
+import imgMain from '@/../public/img-main.jpg'
+import img0 from '@/../public/img0.jpeg'
+import img1 from '@/../public/img1.jpeg'
+import img2 from '@/../public/img2.jpg'
 ---
 <section class="grid grid-cols-1  xl:grid-cols-[920px_minmax(200px,_1fr)] 2xl:grid-cols-[1340px_minmax(100px,_1fr)] xl:max-h-[700px] gap-x-2">
     <div class="grid">
@@ -12,15 +12,21 @@ import img3 from '@/../public/img-3.jpg'
                 <h1 class="text-white -mb-2 md:-mb-4  uppercase text-4xl md:text-6xl lg:text-8xl font-tajawal font-bold tracking-widest ml-12">Limite Sur</h1>
                 <h3 class="text-secondary font-semibold text-xs md:text-xl lg:text-2xl uppercase md:tracking-[0.18em] ml-12 md:ml-[50px] lg:ml-14">Un lugar único en la patagonia</h3>
             </div>
-            <Image class={'bg-cover bg-center w-full h-full'} src={img0} alt='img0'/>
+            <Image class={'w-full h-full object-cover'} src={imgMain} alt='img0'/>
         </div>
     </div>
     <div class="grid grid-cols-3 xl:grid-cols-1 items-center xl:pr-2 xl:py-2  gap-y-2 mx-auto ">
-        <Image src={img1} alt='img1' class={'h-[120px] sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] bg-cover bg-center'}/>
-        <Image src={img2} alt='img9' class={'h-[120px]  sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] bg-cover bg-center'}/>
+        <Image src={img0} alt='img1' class={'h-[120px] sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] object-cover bg-center filterImg'}/>
+        <Image src={img1} alt='img9' class={'h-[120px]  sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] object-cover bg-center filterImg'}/>
         <div class="grid items-end ">
-            <Image src={img3} alt='img12' class={'h-[120px]  sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] bg-cover bg-center'}/>
+            <Image src={img2} alt='img12' class={'h-[120px]  sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] object-cover bg-center filterImg'}/>
             <a href="/galeria" class="absolute grid right-0 lg:right-3 mx-2 my-4 border border-transparent rounded-xl bg-[#84909A] hover:bg-[#949CA3] transition bg-opacity-[0.8] p-1 md:py-1 md:px-2"><span class="text-white text-[8px] md:text-sm font-regular">Ver más fotos</span></a>
         </div>
     </div>
 </section>
+
+<style>
+    .filterImg:hover {
+        filter: saturate(150%);
+    }
+</style>

@@ -2,7 +2,7 @@
 import imgCaracteristicas from '@/../public/img-caracteristicas.jpg'
 import { Image } from 'astro:assets'
 
-const list = ['Comedor', 'Cocina', 'Patio', 'Living', 'Jardín', 'Playroom', 'Wifi', 'Vajilla', 'Microondas', 'Pileta', 'Calefacción', 'TV']
+const list = ['Comedor', 'Cocina', 'Patio', 'Living', 'Jardín', 'Playroom', 'Wifi', 'Vajilla', 'Parrilla', 'Microondas', 'Blanqueria', 'Calefacción', 'TV']
 ---
 
 <section class="flex flex-col mt-8 md:mt-20">
@@ -12,11 +12,11 @@ const list = ['Comedor', 'Cocina', 'Patio', 'Living', 'Jardín', 'Playroom', 'Wi
     </div>
     
     <div class="flex flex-col md:justify-center mt-10 bg-primary">
-        <h1 class=" mt-8 text-white tajawal font-medium mx-auto tracking-widest text-xl md:text-2xl xl:text-4xl uppercase mt-4 z-10">Características</h1>
+        <h1 class="mt-8 text-white tajawal font-medium mx-auto tracking-widest text-xl md:text-2xl xl:text-4xl uppercase mt-4 z-10">Características</h1>
         <div class="grid grid-cols-[160px_minmax(150px,_1fr)] lg:grid-rows-1 max-h-[260px] md:grid-cols-[220px_minmax(200px,_1fr),180px] lg:grid-cols-[300px_minmax(100px,_1fr),280px] xl:grid-cols-[400px_minmax(100px,_1fr),500px]  md:gap-x-10 items-center justify-items-evenly bg-primary">
             <div class="flex justify-center ">
-                <div class="flex relative">
-                    <Image src={imgCaracteristicas} alt="img13" class={' lg:bottom-2  w-[142px] h-[164px] md:w-[200px] md:h-[280px] lg:h-[360px] lg:w-[240px] scale-y-[1.1] xl:h-[420px] xl:w-[300px] border border-transparent rounded-sm shadow-3xl'}/>
+                <div class="flex relative -bottom-2 md:bottom-14 lg:bottom-4">
+                    <Image src={imgCaracteristicas} alt="img13" class={'object-cover w-[142px] h-[204px] md:w-[200px] md:h-[320px] lg:h-[340px] lg:w-[240px] scale-y-[1.1] xl:h-[360px] xl:w-[300px] border border-transparent rounded-sm shadow-3xl'}/>
                 </div>
             </div>
             <div class="mt-8 mb-4 md:mt-0">
