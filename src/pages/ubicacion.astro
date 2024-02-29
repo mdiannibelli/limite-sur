@@ -1,0 +1,21 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import GoogleMap from '../components/GoogleMap.astro';
+---
+
+<Layout title="Ubicación" description="Las Lauras 915 Villa Ayelen, Esquel, Chubut, Argentina">
+    <section class="flex flex-col overflow-hidden items-center">
+        <div class="mt-12">
+            <h1 class="tajawal text-4xl md:text-6xl text-quaternary tracking-[0.25em] uppercase">Ubicación</h1>
+        </div>
+        <div class="w-full h-auto mt-8 flex flex-col items-center justify-center">
+            <div class="bg-primary bg-opacity-[0.65] w-full flex justify-center p-2 z-10 relative top-8 md:top-10">
+                <span class="text-white tajawal text-xs md:text-xl font-semibold">Las Lauras 915 Villa Ayelen, Esquel, Chubut, Argentina</span>
+            </div>
+            <GoogleMap class="w-full min-h-[100dvh]"/>
+        </div>
+        <div class="max-w-[300px] md:max-w-[600px] lg:max-w-[900px] mt-20 flex flex-col justify-center">
+            <p class="tajawal text-sm md:text-md lg:text-xl text-pretty mb-4">Ubicada en un apacible barrio residencial, la propiedad se encuentra inmersa <strong class="text-primary text-medium">en un entorno natural, rodeada de exuberante vegetación, majestuosas montañas y serenos lagos</strong>. Este refugio proporciona un ambiente único que captura la esencia y la belleza distintiva de la Patagonia, brindando a los huéspedes una experiencia auténtica y memorable en este espectacular rincón del mundo.</p>
+        </div>
+        </section>
+</Layout>
