@@ -11,9 +11,9 @@ import '../styles/swiper-custom.css'
 import { Navigation, EffectCoverflow, Pagination} from 'swiper/modules';
 
 const imgs = [
-  {img: '/img0.jpeg', title:'img0'}, 
-  {img: '/img1.jpeg', title:'img1'},
-  {img: '/img2.jpg', title:'img2'},
+  {img: '/img0.webp', title:'img0'}, 
+  {img: '/img1.webp', title:'img1'},
+  {img: '/img2.webp', title:'img2'},
   {img: '/img3.webp', title:'img3'},
   {img: 'img4.webp', title:'img4'},
   {img: '/img5.webp', title:'img5'},

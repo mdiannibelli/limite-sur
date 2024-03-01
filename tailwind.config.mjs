@@ -14,7 +14,13 @@ export default {
 			},
 			boxShadow: {
 				'3xl': '0 25px 60px -5px rgba(0, 0, 0, 0.35)',
-			  }
+			  },
+			gridTemplateColumns: {
+				'reserva': '800px 400px',
+				'reservaLg': '600px 300px',
+				'reservaMd': '400px 250px',
+				'services': '200px 200px 200px',
+			}
 		},
 	},
 	plugins: [require('tailwindcss-animated')],

@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { Image } from 'astro:assets';
+const imgs = [
+  {img: '/img0.webp', title:'img0'},
+  {img: '/img2.webp', title:'img2'},
+  {img: '/img5.webp', title:'img5'},
+  {img: '/img4.webp', title:'img4'},
+]
+
+const icons = [
+    {icon: '/icon-heladera.svg', name:'Heladera'},
+    {icon: '/icon-microondas.svg', name:'Microondas'},
+    {icon: '/icon-parrilla.svg', name:'Parrilla'},
+    {icon: '/icon-ropablanca.svg', name:'Ropa blanca'},
+    {icon: '/icon-ropacama.svg', name:'Ropa de cama'},
+    {icon: '/icon-tirobalanceado.svg', name:'Tiro Balanceado'},
+    {icon: '/icon-tostadora.svg', name:'Tostadora'},
+    {icon: '/icon-tv.svg', name:'TV por cable'},
+    {icon: '/icon-ventilador.svg', name:'Ventilador'},
+    {icon: '/icon-wifigratis.svg', name:'Wi-fi gratis'},
+    {icon: '/icon-estacionamiento.svg', name:'Estacionamiento'}
+]
+---
+
+<Layout title='Reserva' description='Haz tu reserva de limite sur.'>
+    <section class="flex flex-col justify-center ">
+        <div class="mt-12 flex flex-col items-center gap-y-4">
+            <h1 class="font-tajawal text-4xl md:text-6xl text-quaternary tracking-[0.25em] uppercase">Reservá</h1>
+            <div class="flex gap-x-2">
+                {imgs.map ((image) => (
+                        <picture>
+                            <img class="w-auto h-auto object-cover transition-all duration-500 hover:z-10 hover:scale-110" src={image.img} alt={image.title}/>
+                        </picture>
+                    
+                ))}
+            </div>
+        </div>
+    </section>
+    <section class="mt-12 grid grid-cols-1 md:grid-cols-reservaMd lg:grid-cols-reservaLg xl:grid-cols-reserva lg:justify-items-center justify-center items-start gap-x-6 m-4">
+        <div>
+            <h1 class="font-tajawal font-[800] text-primary text-3xl xl:text-5xl -ml-1">Cabañas Limite Sur</h1>
+            <span class="font-tajawal text-md xl:text-lg tracking-widest opacity-[0.8] text-quaternary font-semibold">Las Lauras 915 Villa Ayelen, Esquel, Chubut, Argentina.</span>
+            <hr class="border-quaternary opacity-[0.8] w-full border-1 mt-2">
+            <div class="mt-6 flex flex-col gap-y-4">
+                <p class="font-tajawal text-quaternary font-medium text-sm xl:text-xl text-pretty"><strong>Cabañas Limite Sur cuenta con cabañas en dos plantas, con comodidades para hasta 6 pasajeros.</strong></p>
+                <p class="font-tajawal text-quaternary font-medium text-sm xl:text-xl text-pretty"><strong>Dormitorio principal con cama matrimonial en planta baja, segundo y tercer dormitorio con 2 camas de una plaza, ambos en planta alta.</strong></p>
+                <p class="font-tajawal text-quaternary font-medium text-sm xl:text-xl text-pretty"><strong>Baño en planta baja, cocina totalmente equipada con vajilla completa. Heladera Familiar, microondas, procesadora, pava eléctrica y tostadora.</strong></p>
+                <p class="font-tajawal text-quaternary font-medium text-sm xl:text-xl text-pretty"><strong>Calefacción por tiro balanceado.</strong></p>
+            </div>
+            <hr class="border-quaternary opacity-[0.8] w-full border-1 mt-4">
+            <div class="flex flex-col mt-4">
+                <h1 class="font-tajawal font-bold text-primary text-xl xl:text-3xl -ml-1">Servicios y equipamientos</h1>
+                <div class="grid grid-cols-2 md:grid-cols-services mt-4 gap-y-4 md:gap-y-6">
+                        {
+                            icons.map((icon) => (
+                                <div class="flex gap-x-2">
+                                    <img src={icon.icon} alt={icon.name}/>
+                                    <span class="font-tajawal text-xs md:text-base">{icon.name}</span>
+                                </div>
+                            ))
+                        }
+                </div>
+            </div>
+        </div>
+        <div class="border-2 border-opacity-[0.6] border-quaternary p-4 md:p-8 rounded-lg mt-8">
+            <div class="flex flex-col gap-y-4">
+                 <img src="/logo-bn.webp" alt="logo-bn" class="size-8 md:size-12"/>
+                <h3 class="font-tajawal text-xs md:text-base font-semibold uppercase">Cabañas limite sur</h3>
+                <span class="flex gap-x-2 font-tajawal text-xs md:text-lg"><img src='./clock.svg'/>Check-in 14:00h | Check-out 10:00h</span>
+                <hr class="border-quaternary opacity-[0.8] w-full border-1">
+                <span class="flex gap-x-2 font-tajawal text-xs md:text-lg"><img src='./person.svg'/>2 - 6 personas</span>
+                <a href="https://www.booking.com/hotel/ar/limite-sur-esquel.es-ar.html" target="_blank" rel="noopener" class="flex justify-center border p-2 lg:p-4 rounded-2xl bg-[#2E2E2E] hover:bg-[#414141] text-white uppercase cursor-pointer">Reservá</a>
+            </div>
+        </div>
+
+    </section>
+</Layout>
