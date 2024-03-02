@@ -10,23 +10,17 @@ import img2 from '/public/img2.webp'
         <div class="flex items-end">
             <div class="flex mb-4 md:mb-12 flex-col justify-end absolute bg-primary bg-opacity-[0.6] w-full xl:w-[920px] 2xl:w-[1340px] py-2 md:py-4">
                 <h1 class="text-white -mb-2 md:-mb-4  uppercase text-4xl md:text-6xl lg:text-8xl font-tajawal font-bold tracking-widest ml-12">Limite Sur</h1>
-                <h3 class="text-secondary font-tajawal font-semibold text-xs md:text-xl lg:text-2xl uppercase md:tracking-[0.18em] ml-12 md:ml-[50px] lg:ml-14">Un lugar único en la patagonia</h3>
+                <h2 class="text-secondary font-tajawal font-semibold text-xs md:text-xl lg:text-2xl uppercase md:tracking-[0.18em] ml-12 md:ml-[50px] lg:ml-[52px]">Un lugar único en la patagonia</h2>
             </div>
-            <Image class={'w-full h-full object-cover'} src={imgMain} alt='img0'/>
+            <Image class={'w-full h-full object-cover'} src={imgMain} alt='img0' loading="eager"/>
         </div>
     </div>
     <div class="grid grid-cols-3 xl:grid-cols-1 items-center xl:pr-2 xl:py-2  gap-y-2 mx-auto ">
-        <Image src={img0} alt='img1' class={'h-[120px] sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] object-cover bg-center filterImg'}/>
-        <Image src={img1} alt='img9' class={'h-[120px]  sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] object-cover bg-center filterImg'}/>
+        <Image src={img0} alt='img1' class={'h-auto sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] object-cover bg-center'}/>
+        <Image src={img1} alt='img9' class={'h-auto  sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] object-cover bg-center'}/>
         <div class="grid items-end ">
-            <Image src={img2} alt='img12' class={'h-[120px]  sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] object-cover bg-center filterImg'}/>
+            <Image src={img2} alt='img12' class={'h-auto  sm:h-[160px] lg:min-h-[220px] xl:w-[600px] 2xl:w-[540px] object-cover bg-center'}/>
             <a href="/galeria" class="absolute flex right-1 lg:right-3 mx-auto my-2 border border-transparent rounded-xl bg-[#84909A] hover:bg-[#949CA3] transition bg-opacity-[0.8] p-1 md:py-1 md:px-2"><span class="text-white text-[8px] font-tajawal md:text-sm font-regular">Ver más fotos</span></a>
         </div>
     </div>
 </section>
-
-<style>
-    .filterImg:hover {
-        filter: saturate(150%);
-    }
-</style>

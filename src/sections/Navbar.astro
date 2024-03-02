@@ -3,30 +3,30 @@ import LogoNavbar from '../components/LogoNavbar.astro'
 import MenuResponsive from '../components/MenuResponsive.astro'
 import IconMenu from '../components/icons/icon-menu.astro'
 ---
-<nav class="flex justify-around xl:justify-between items-center bg-primary xl:px-44">
+<div class="flex justify-around xl:justify-between items-center bg-primary xl:px-44">
     <div>
-        <a href="/" rel="noopener"><LogoNavbar class="h-full lg:h-40 w-full "/></a>
+        <a href="/" rel="noopener" aria-label="Limite Sur"><LogoNavbar class="h-full lg:h-40 w-full "/></a>
     </div>
-    <ul aria-hidden class="hidden md:flex gap-x-12">
-        <a href="/"><li class="text-white font-tajawal hover:text-secondary uppercase text-2xl font-semibold">Inicio</li></a>
-        <a href="/galeria"><li class="text-white font-tajawal hover:text-secondary uppercase text-2xl font-semibold">Galería</li></a>
-        <a href="/reserva"><li class="text-white font-tajawal hover:text-secondary uppercase text-2xl font-semibold">Reservá</li></a>
-        <a href="/ubicacion"><li class="text-white font-tajawal hover:text-secondary uppercase text-2xl font-semibold">Ubicación</li></a>
-    </ul>
+    <nav aria-label="Menú de navegación" aria-hidden class="hidden md:flex gap-x-12 p-4 text-white font-tajawal uppercase text-3xl font-bold">
+        <a href="/" class="hover:text-secondary">Inicio</a>
+        <a href="/galeria" class="hover:text-secondary">Galería</a>
+        <a href="/reserva" class="hover:text-secondary">Reservá</a>
+        <a href="/ubicacion" class="hover:text-secondary">Ubicación</a>
+    </nav>
     
     <div class="flex md:hidden" >
         <MenuResponsive/>
     </div>
     <nav id="mennupal" class="md:hidden hidden flex-col fixed h-full z-50 w-full top-0 items-end bg-primary bg-opacity-[0.5]">
         <IconMenu id="close" class="flex mx-8 my-20" loading="eager"/>
-        <ul class="flex flex-col gap-y-20 justify-center h-full w-full items-center mb-32">
-            <a href="/"><li class="text-white font-tajawal hover:text-secondary uppercase text-2xl font-bold">Inicio</li></a>
-            <a href="/galeria"><li class="text-white font-tajawal hover:text-secondary uppercase text-2xl font-bold">Galería</li></a>
-            <a href="/reserva"><li class="text-white  font-tajawal hover:text-secondary uppercase text-2xl font-bold">Reservá</li></a>
-            <a href="/ubicacion"><li class="text-white font-tajawal hover:text-secondary uppercase text-2xl font-bold">Ubicación</li></a>
+        <ul aria-label="Menú de navegación" class="flex flex-col gap-y-20 justify-center items-center mb-32 w-full h-full text-white font-tajawal uppercase text-3xl font-bold">
+            <a href="/">Inicio</a>
+            <a href="/galeria">Galería</a>
+            <a href="/reserva">Reservá</a>
+            <a href="/ubicacion">Ubicación</a>
         </ul>
     </nav>
-</nav>
+</div>
 
 <script>
     const mennuResponsive = document.getElementById('menuResponsive');

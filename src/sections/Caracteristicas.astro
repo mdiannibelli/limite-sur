@@ -13,13 +13,13 @@ const list = ['Comedor', 'Cocina', 'Patio', 'Living', 'Jardín', 'Playroom', 'Wi
     
     <div class="flex flex-col md:justify-center mt-10 bg-primary">
         <h1 class="mt-8 text-white tajawal font-medium mx-auto tracking-widest text-xl md:text-2xl xl:text-4xl uppercase mt-4 z-10">Características</h1>
-        <div class="grid grid-cols-[160px_minmax(150px,_1fr)] lg:grid-rows-1 max-h-[260px] md:grid-cols-[220px_minmax(200px,_1fr),180px] lg:grid-cols-[300px_minmax(100px,_1fr),280px] xl:grid-cols-[400px_minmax(100px,_1fr),500px]  md:gap-x-10 items-center justify-items-evenly bg-primary">
+        <div class="grid grid-cols-[120px_minmax(150px,_1fr)] lg:grid-rows-1 max-h-[260px] md:grid-cols-[220px_minmax(200px,_1fr),180px] lg:grid-cols-[300px_minmax(100px,_1fr),280px] xl:grid-cols-[400px_minmax(100px,_1fr),500px]  md:gap-x-10 items-center justify-items-evenly bg-primary">
             <div class="flex justify-center ">
                 <div class="flex relative -bottom-2 md:bottom-14 lg:bottom-4">
-                    <Image src={imgCaracteristicas} alt="img13" class={'object-cover w-[142px] h-[204px] md:w-[200px] md:h-[320px] lg:h-[340px] lg:w-[240px] scale-y-[1.1] xl:h-[360px] xl:w-[300px] border border-transparent rounded-sm shadow-3xl'}/>
+                    <Image src={imgCaracteristicas} alt="img13" class={'object-cover w-[110px] h-auto md:w-[200px] md:h-[320px] lg:h-[340px] lg:w-[240px] scale-y-[1.1] xl:h-[360px] xl:w-[300px] border border-transparent rounded-sm shadow-3xl'}/>
                 </div>
             </div>
-            <div class="mt-8 mb-4 md:mt-0">
+            <div class="mt-8 mx-2 mb-4 md:mt-0">
                 <p class="tajawal md:max-w-[700px] mx-auto text-[8px] md:text-sm xl:text-lg text-white font-regular text-pretty">Propiedad de alquiler temporario a 20 km del aeropuerto a 3 km del centro de Ski La Hoya, próximo al parque nacional Los Alerces y al Campo de Tulipanes.<br> La misma se encuentra ubicada en un barrio residencial, rodeada de vegetación, montañas y lagos.</p>
                 <ul class="grid md:hidden col-span-3 md:col-span-1 justify-center mt-2 gap-x-12 grid-cols-[40px_minmax(40px,40px)]">
                     {list.map((list) => (
