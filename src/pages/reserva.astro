@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import FormularioDeReserva from '../components/FormularioDeReserva.astro';
 
-import { Image } from 'astro:assets';
 const imgs = [
   {img: '/img0.webp', title:'img0'},
   {img: '/img2.webp', title:'img2'},
@@ -71,9 +71,29 @@ const icons = [
                 <span class="flex gap-x-2 font-tajawal text-xs md:text-lg"><img src='./clock.svg'/>Check-in 14:00h | Check-out 10:00h</span>
                 <hr class="border-quaternary opacity-[0.8] w-full border-1">
                 <span class="flex gap-x-2 font-tajawal text-xs md:text-lg"><img src='./person.svg'/>2 - 6 personas</span>
-                <a href="https://www.booking.com/hotel/ar/limite-sur-esquel.es-ar.html" target="_blank" rel="noopener" class="flex justify-center border p-2 lg:p-4 rounded-2xl bg-[#2E2E2E] hover:bg-[#414141] text-white uppercase cursor-pointer">Reservá</a>
+                <button id="reserva-btn" class="flex justify-center border p-2 lg:p-4 rounded-2xl bg-[#2E2E2E] hover:bg-[#414141] text-white uppercase cursor-pointer">Reservá</button>
             </div>
         </div>
-
     </section>
+    <div id="formulario-reserva" class="absolute hidden justify-center items-center bg-primary top-0 bg-opacity-[0.8] min-h-[188dvh] w-full animate-fade animate-duration-500 animate-delay-100 animate-ease-linear">
+        <FormularioDeReserva/>
+    </div>
 </Layout>
+
+<script>
+    const close = document.getElementById('close-form');
+    const formulario = document.getElementById('formulario-reserva');
+
+    const btn = document.getElementById('reserva-btn');
+
+    btn?.addEventListener('click', () => {
+        formulario?.classList.remove('hidden');
+        formulario?.classList.add('flex');
+    })
+
+    close?.addEventListener('click', () => {
+        formulario?.classList.remove('flex');
+        formulario?.classList.add('hidden');
+    })
+
+</script>
