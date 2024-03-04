@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import FormularioDeReserva from '../components/FormularioDeReserva.astro';
+import IconPerson from '../components/icons/icon-person.astro'
+import IconClock from '../components/icons/icon-clock.astro'
 
 const imgs = [
   {img: '/img0.webp', title:'img0'},
@@ -68,9 +70,9 @@ const icons = [
             <div class="flex flex-col gap-y-4">
                  <img src="/logo-bn.webp" alt="logo-bn" class="size-8 md:size-12"/>
                 <h3 class="font-tajawal text-xs md:text-base font-semibold uppercase">Cabañas limite sur</h3>
-                <span class="flex gap-x-2 font-tajawal text-xs md:text-lg"><img src='./clock.svg' alt="clock"/>Check-in 14:00h | Check-out 10:00h</span>
+                <span class="flex items-center gap-x-2 font-tajawal text-xs md:text-lg"><IconClock/>Check-in 14:00h | Check-out 10:00h</span>
                 <hr class="border-quaternary opacity-[0.8] w-full border-1">
-                <span class="flex gap-x-2 font-tajawal text-xs md:text-lg"><img src='./person.svg' alt="person"/>2 - 6 personas</span>
+                <span class="flex items-center gap-x-2 font-tajawal text-xs md:text-lg"><IconPerson/>2 - 6 personas</span>
                 <button id="reserva-btn" class="flex justify-center border p-2 lg:p-4 rounded-2xl bg-[#2E2E2E] hover:bg-[#414141] text-white uppercase cursor-pointer">Reservá</button>
             </div>
         </div>
