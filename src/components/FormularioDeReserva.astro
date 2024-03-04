@@ -1,5 +1,7 @@
 ---
 import IconMenu from '../components/icons/icon-menu.astro'
+import '../styles/form.css'
+import {ContactForm} from './ContactForm.jsx'
 ---
 
 <div class="m-4">
@@ -8,73 +10,9 @@ import IconMenu from '../components/icons/icon-menu.astro'
         <IconMenu id="close-form" class="cursor-pointer size-8" />
     </div>
     <h1 class="font-tajawal font-[300] text-xl lg:text-4xl text-white mb-8 uppercase">Haz tu reserva rellenando el siguiente formulario</h1>
-    <form action="" class="grid grid-cols-2 gap-4">
-        <div>
-            <label for="nombre" class="flex flex-col">
-                <span class="font-tajawal font-semibold text-md md:text-lg text-white">Nombre*</span>
-                <input type="text" required class="border-b-2 border-transparent border-white bg-transparent h-8 text-white font-tajawal font-thin text-xs md:text-2xl w-auto focus:outline-none">
-            </label>
-        </div>
-        <div>
-            <label for="email" class="flex flex-col">
-                <span class="font-tajawal font-semibold text-md md:text-lg text-white">E-mail*</span>
-                <input type="email" id="email" required class="border-b-2 border-transparent border-white bg-transparent h-8 text-white font-tajawal font-thin text-xs md:text-2xl w-auto focus:outline-none">
-                <span class="font-tajawal text-md text-red-600" id="emailStatus"></span>
-            </label>
-        </div>
-        <div>
-            <label for="phone" class="flex flex-col">
-                <span class="font-tajawal font-semibold text-md md:text-lg text-white">Número de celular*</span>
-                <input type="text" id="phone" required class="border-b-2 border-transparent border-white bg-transparent h-8 text-white font-tajawal font-thin text-xs md:text-2xl w-auto focus:outline-none">
-                <span class="font-tajawal text-md text-red-600" id="phoneStatus"></span>
-            </label>
-        </div>
-        
-        <div class="flex flex-col">
-            <span class="font-tajawal font-semibold text-md md:text-lg text-white">Cabaña a reservar*</span>
-            <select name="cabañas" required id="cabañas-reserva" class="border-2 bg-transparent border-white h-8 font-tajawal text-white font-thin text-xs md:text-xl w-auto focus:outline-none">
-                <option value="1" class="bg-primary">Cabaña Esquel</option>
-            </select>
-        </div>
-        <div class="flex flex-col">
-            <span class="font-tajawal font-semibold text-md md:text-lg text-white">Cantidad de ocupantes*</span>
-            <select name="ocupantes" required id="ocupantes" class="border-2 bg-transparent border-white h-8 font-tajawal text-white font-thin text-xs md:text-xl w-auto focus:outline-none">
-                <option value="1" class="bg-primary">2 ocupantes</option>
-                <option value="2" class="bg-primary">3 ocupantes</option>
-                <option value="3" class="bg-primary">4 ocupantes</option>
-                <option value="4" class="bg-primary">5 ocupantes</option>
-                <option value="5" class="bg-primary">6 ocupantes</option>
-            </select>
-        </div>
-        <div class="flex flex-col">
-            <span class="font-tajawal font-semibold text-md md:text-lg text-white">Fecha*</span>
-            <input id="fecha" type="date" required class="p-2 border-2 bg-transparent w-48 border-white h-8 font-tajawal text-white font-thin text-xs md:text-xl w-auto focus:outline-none"/>
-        </div>
-        <div class="col-span-2">
-            <label for="mensaje" class="font-tajawal font-semibold text-md md:text-lg text-white" >
-                <span class="font-tajawal font-semibold text-lg text-white">Mensaje*</span>
-                <div class="m-0 p-0 focus:outline-none">
-                    <textarea name="mensaje" required id="mensaje" rows="6" class="p-2.5 block w-full border-2 border-transparent border-white bg-transparent font-tajawal font-thin w-full  focus:outline-none"/>
-                </div>
-            </label>
-        </div>
-        <div class="col-span-full">
-            <label for="enviar" class="flex justify-center">
-                <button id="enviar-formulario" type="submit" class="font-tajawal text-white text-2xl uppercase px-8 py-2 rounded-md bg-primary hover:bg-secondary transition duration-500">Enviar</button>
-            </label>
-        </div>
-    </form>
+    <ContactForm client:visible/>
 </div>
 
-<style>
-    input[type="date"]::-webkit-calendar-picker-indicator {
-        filter: invert(1);
-    }
-    input[type="date"]:focus::-webkit-datetime-edit-day-field {
-    background-color: initial;
-}
-</style>
+<script src="../components/Form.js"/>
 
-<script src="../components/Form.js">
-
-</script>
+  
