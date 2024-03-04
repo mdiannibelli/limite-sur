@@ -9,11 +9,11 @@ export const ContactForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_lvzn34p', 'template_xb5rgy1', form.current, {publicKey: 'JuEMmHTzhEzcOYcm6'}
+    emailjs.sendForm('service_cpsk7ol', 'template_748prdz', form.current, {publicKey: '69btsP3H33wpWkDoI'}
       ).then(
         () => {
             button.current.textContent = 'Formulario enviado con éxito!'
-            button.current.className = 'font-tajawal text-white text-xs md:text-xl font-thin flex justify-center uppercase mt-6 mx-auto max-w-[360px] rounded-md p-2 bg-primary'
+            button.current.className = 'font-tajawal text-primary text-xs md:text-xl font-thin flex justify-center uppercase mt-6 mx-auto max-w-[360px] rounded-md p-2 bg-white'
         },
         (error) => {
           console.log('FAILED...', error.text);
