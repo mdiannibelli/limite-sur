@@ -15,7 +15,7 @@ const imgs = [
   {img: '/img1.webp', title:'img1'},
   {img: '/img2.webp', title:'img2'},
   {img: '/img3.webp', title:'img3'},
-  {img: 'img4.webp', title:'img4'},
+  {img: '/img4.webp', title:'img4'},
   {img: '/img5.webp', title:'img5'},
   {img: '/img6.webp', title:'img6'},
   {img: '/img7.webp', title:'img7'},

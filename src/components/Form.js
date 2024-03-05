@@ -25,6 +25,9 @@
  const phoneStatus = document.getElementById('phoneStatus');
  const phoneRegex = /^\(?\d{2}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/
 
+ const noches = document.getElementById('noches');
+ const nochesStatus = document.getElementById('nochesStatus');
+
  submit.addEventListener('click', function(e) {
      if(emailRegex.test(email.value)) {
          emailStatus.innerText = ''  
@@ -38,5 +41,12 @@
      } else {
          e.preventDefault()
          phoneStatus.innerText = "Ingrese un número de celular válido"
+     }
+
+     if(noches.value != 0 && noches.value <= 200 ) {
+         nochesStatus.innerText = ''
+    } else {
+         e.preventDefault()
+         nochesStatus.innerText = "Ingrese una cantidad de noches válida"
      }
  })

@@ -73,25 +73,26 @@ const icons = [
                 <span class="flex items-center gap-x-2 font-tajawal text-sm mt-1 md:text-lg"><IconClock/>Check-in 14:00h | Check-out 10:00h</span>
                 <hr class="border-quaternary opacity-[0.8] w-full border-1">
                 <span class="flex items-center gap-x-2 font-tajawal text-sm mt-1 md:text-lg"><IconPerson/>2 - 6 personas</span>
-                <button id="reserva-btn" class="flex justify-center border p-2 lg:p-4 rounded-2xl bg-[#2E2E2E] hover:bg-[#414141] text-white uppercase cursor-pointer">Reservá</button>
+                <button id="reserva-btn" onclick="scrollToSection('reservar')" class="flex justify-center border p-2 lg:p-4 rounded-2xl bg-[#2E2E2E] hover:bg-[#414141] text-white uppercase cursor-pointer">Reservá</button>
             </div>
         </div>
     </section>
-    <div id="formulario-reserva" class="absolute hidden justify-center items-center bg-primary top-0 bg-opacity-[0.8] min-h-[188dvh] w-full animate-fade animate-duration-500 animate-delay-100 animate-ease-linear">
+    <div id="formulario-reserva" class="absolute hidden justify-center items-center bg-[#010101] top-0 bg-opacity-[0.8] min-h-[188dvh] w-full animate-fade animate-duration-500 animate-delay-100 animate-ease-linear">
         <FormularioDeReserva/>
     </div>
 </Layout>
 
-<script>
-    const close = document.getElementById('close-form');
-    const formulario = document.getElementById('formulario-reserva');
-
-    const btn = document.getElementById('reserva-btn');
-
-    btn?.addEventListener('click', () => {
+<script is:inline>
+    function scrollToSection(sectionId) {
         formulario?.classList.remove('hidden');
         formulario?.classList.add('flex');
-    })
+        const section = document.getElementById(sectionId);
+        if(sectionId) {
+            section.scrollIntoView({behavior: 'smooth'}); 
+        }
+    }
+    const close = document.getElementById('close-form');
+    const formulario = document.getElementById('formulario-reserva');
 
     close?.addEventListener('click', () => {
         formulario?.classList.remove('flex');

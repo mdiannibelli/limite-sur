@@ -61,6 +61,11 @@ export const ContactForm = () => {
             </select>
         </div>
         <div className="flex flex-col">
+            <span className="font-tajawal font-semibold text-md md:text-lg text-white">Cantidad de noches*</span>
+            <input type="number" id="noches" name="user_noches" required className="border-b-2 border-transparent border-white bg-transparent h-8 text-white font-tajawal font-thin text-xs md:text-2xl w-auto focus:outline-none"/>
+                <span className="font-tajawal text-md text-red-600" id="nochesStatus"></span>     
+        </div>
+        <div className="flex flex-col">
             <span className="font-tajawal font-semibold text-md md:text-lg text-white">Fecha*</span>
             <input id="fecha" type="date" name="user_date" required className="date-value p-2 border-2 bg-transparent w-48 border-white h-8 font-tajawal text-white font-thin text-xs md:text-xl w-auto focus:outline-none"/>
         </div>
