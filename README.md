@@ -1,6 +1,12 @@
 # "Limite Sur", a unique place in Patagonia
 Website for a client who has a cabin in the south in the Patagonia of Argentina. It has 4 sections, menu and responsive design, made with Astro and Tailwind CSS.
 
+[![limitesur.png](https://i.postimg.cc/rmV3t9Ck/limitesur.png)](https://postimg.cc/v1K3JfNq)
+[![limitesur-2.png](https://i.postimg.cc/Zqh1JmW0/limitesur-2.png)](https://postimg.cc/K1J95dry)
+[![limitesur-3.png](https://i.postimg.cc/7ZzFvhYp/limitesur-3.png)](https://postimg.cc/PCt3YtD4)
+[![limitesur-4.png](https://i.postimg.cc/bvH4J5ng/limitesur-4.png)](https://postimg.cc/Jy0pYPPH)
+[![limitesur-5.png](https://i.postimg.cc/Pf3sY0RF/limitesur-5.png)](https://postimg.cc/bdtBjV8Q)
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
